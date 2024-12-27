@@ -1,0 +1,90 @@
+.about-container {
+  background-color: #000; /* Black background */
+  color: #fff; /* White text color */
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-sections {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.section {
+  margin-bottom: 20px;
+  position: relative;
+  width: 300px;
+}
+
+.section h2 {
+  color: orangered; /* Pinkish red color */
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+
+.section h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px; /* Adjust the position of the border */
+  width: 0;
+  height: 2px;
+  background: orangered; /* Border color */
+  transition: width 0.3s ease; /* Smooth animation */
+}
+
+.section h2.active::after {
+  width: 100%; /* Full width animation */
+}
+
+.section h2:hover::after {
+  width: 100%; /* Highlight on hover */
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden; /* Prevent content jumping */
+  max-width: 100%; /* Ensure alignment */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth slide-in effect */
+}
+
+.section ul li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.section ul.show {
+  opacity: 1;
+  transform: translateX(0); /* Slide to position */
+}
+
+.section ul.hidden {
+  opacity: 0;
+  transform: translateX(-50px); /* Start slightly off-screen */
+}

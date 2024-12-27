@@ -1,0 +1,8 @@
+.foot{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border: 1px white solid;
+    padding: 4.5px;
+
+}

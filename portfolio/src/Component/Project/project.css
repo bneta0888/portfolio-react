@@ -1,0 +1,66 @@
+.box {
+    width: 400px;
+    border: 1px solid white;
+    height: 300px;
+    border-radius: 20px;
+    position: relative; /* Required for positioning child elements */
+    overflow: hidden; /* Ensures content stays within the box */
+}
+
+.flexs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+.box > img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.box > p {
+    position: absolute; /* To position on top of the image */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center alignment */
+    color: white;
+    font-size: 1.2em;
+    text-align: justify;
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background */
+    padding: 15px 15px;
+    border-radius: 10px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for hover effects */
+    z-index: 1; /* Make sure it appears on top of the image */
+    width: 100%;
+    height: 100%;
+}
+.box > button{
+    top: 80%;
+    position: absolute;
+    margin-left: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: orangered;
+    display: none;
+
+}
+.box:hover > button{
+    display: block;
+    z-index: 12;
+}
+.box:hover > p {
+    opacity: 1; 
+}
+
+.box:hover > img {
+    opacity: 0.3; 
+}
