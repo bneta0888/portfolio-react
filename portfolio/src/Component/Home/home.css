@@ -5,8 +5,8 @@
 .container {
   width: 100%;
   display: flex;
-  padding: 3% 6%;
-  margin-top: 1.5%;
+  padding: 3% 6% 0% 6%;
+  position: relative;
 }
 .left-box {
   width: 29%;
@@ -24,7 +24,8 @@
 .middle-box > img {
   height: 600px;
   width: 100%;
-  transform: translateY(-5%);
+  transform: translateY(0.5%);
+
 }
 
 .right-box {
@@ -66,3 +67,4 @@
 a{
   text-decoration: none;
   color:rgba(255, 255, 255, 0.879);
+}

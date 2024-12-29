@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import Nav from "../Nav/Nav";
 import "./About.css"; // CSS file for styling
+import Foot from "../foot/Foot";
+
 
 const About = () => {
   const [activeSection, setActiveSection] = useState(null);
@@ -67,6 +69,7 @@ const About = () => {
           </div>
         </div>
       </div>
+      <Foot/>
     </div>
   );
 };

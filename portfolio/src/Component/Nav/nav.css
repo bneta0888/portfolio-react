@@ -1,31 +1,86 @@
+/* Base Styling */
 .nav-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:2% 5%;
+  padding: 1rem 2rem;
+  color: white;
+  box-sizing: border-box;
+  position: relative; /* Important to position the navbar */
+  z-index: 10; /* Ensure navbar is on top */
+  background-color: rgba(0, 0, 0, 0.438);}
+
+.left > h1 {
+  font-size: 24px;
+  color: white;
+  margin: 0;
 }
-.left > h1{
-    font-size: 35px;
+
+.right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .flex {
   list-style: none;
   display: flex;
   gap: 20px;
-  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
 }
 
-
-.link:hover {
-background-color: orangered;
-cursor: pointer;
-
-}
-.link{
-  padding: 8px;
+.link {
+  text-decoration: none;
+  color: white;
+  padding: 8px 12px;
   border-radius: 5px;
 }
-.link:active {
+
+.link:hover {
   background-color: orangered;
   cursor: pointer;
+}
+
+/* Hamburger Menu Button */
+.hamburger {
+  display: none; /* Default is hidden on larger screens */
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  z-index: 11; /* Ensure it is above other elements */
+}
+
+.hamburger .line {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex; /* Show hamburger button on smaller screens */
   }
+
+  .flex {
+    display: none; /* Hide links by default */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+background-color: rgba(0, 0, 0, 0.438);    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 10; /* Ensure menu overlays other content */
+  }
+
+  .flex.open {
+    display: flex; /* Show links when menu is open */
+  }
+}
