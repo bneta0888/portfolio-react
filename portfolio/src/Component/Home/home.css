@@ -7,6 +7,8 @@
   display: flex;
   padding: 3% 6% 0% 6%;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
 }
 .left-box {
   width: 29%;
@@ -25,13 +27,11 @@
   height: 600px;
   width: 100%;
   transform: translateY(0.5%);
-
 }
 
 .right-box {
   width: 29%;
   margin-top: 4%;
-
 }
 
 .left-box > h1 {
@@ -57,14 +57,81 @@
   font-size: 30px;
 }
 
-.icons{
+.icons {
   display: flex;
   flex-direction: column;
   gap: 14px;
   padding-top: 20px;
-  font-size:20px ;
+  font-size: 20px;
 }
-a{
+a {
   text-decoration: none;
-  color:rgba(255, 255, 255, 0.879);
+  color: rgba(255, 255, 255, 0.879);
+}
+
+@media (max-width: 768px) {
+  .left-box,
+  .middle-box,
+  .right-box {
+    width: 100%; /* Takes full width on tablets */
+    margin-top: 2%;
+  }
+
+  .left-box > h1 {
+    font-size: 36px; /* Adjust font size for smaller screens */
+  }
+
+  .left-box > p {
+    font-size: 18px;
+  }
+
+  .flex > button {
+    font-size: 18px;
+    padding: 8px 12px;
+  }
+
+  .middle-box > img {
+    height: auto;
+    margin-top: 200px 0%;
+    width: 90%; /* Makes image fit smaller screens */
+  }
+
+  .right-box > p {
+    font-size: 24px; /* Adjust text size for smaller screens */
+  }
+
+  .icons {
+    flex-direction: row; /* Horizontal alignment for icons */
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .left-box > h1 {
+    font-size: 28px;
+  }
+
+  .left-box > p {
+    font-size: 16px;
+  }
+
+  .flex > button {
+    font-size: 16px;
+    padding: 6px 10px;
+  }
+
+  .middle-box > img {
+    height: auto;
+    width: 100%;
+
+  }
+
+  .right-box > p {
+    font-size: 20px;
+  }
+
+  .icons a {
+    font-size: 20px;
+    margin-bottom: 100px; /* Smaller icon size for mobile */
+  }
 }

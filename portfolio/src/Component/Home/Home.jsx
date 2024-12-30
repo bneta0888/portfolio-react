@@ -7,6 +7,7 @@ import { TypeAnimation } from "react-type-animation";
 import Foot from "../foot/Foot";
 const Home = () => {
   return (
+    <>
     <div>
       <Nav />
 
@@ -101,9 +102,12 @@ const Home = () => {
             </h5>
           </a>
         </div>
+        
       </div>
-      <Foot/>
+    
     </div>
+      <Foot/>
+      </>
   );
 };
 
